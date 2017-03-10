@@ -48,8 +48,8 @@ def parse_file(path):
     points = list()
     for i in range(0, len(chars), 2):
         try:
-            x = chars[i] * 4
-            y = chars[i+1] * 4
+            x = chars[i] * math.log(i)
+            y = chars[i+1] * math.log(i)
             points.append(svg.Point(x, y))
         except:
             pass
